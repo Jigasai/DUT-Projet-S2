@@ -5,10 +5,12 @@ public class Parcelle {
 	boolean traversable = false;
 	String contenu = "";
 	
+	static boolean clePlacee = false;
+	static boolean coffrePlacee = false;
+	
 	final static String ROCHER = "rocher";
 	final static String EAU = "eau";
 	final static String HERBE = "herbe";
-	final static String PLAGE = "plage";
 	
 	public Parcelle(String type){
 		if(type.equals("herbe")){
@@ -18,10 +20,10 @@ public class Parcelle {
 			this.numImage = 1;
 		}else if(type.equals("rocher")){
 			this.numImage = 3;
-			this.traversable = false;
-		}else if(type.equals("plage")){
+		}else if(type.equals("bateauE1")){
 			this.numImage = 4;
-			this.traversable = true;
+		}else if(type.equals("bateauE2")){
+			this.numImage = 5;
 		}
 	}
 	
